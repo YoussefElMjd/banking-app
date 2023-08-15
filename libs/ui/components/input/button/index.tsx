@@ -24,6 +24,7 @@ export default function Button({
                 filter: 'saturate(80%)',
             }}
             onClick={handleOnClick}
+            spacing={'0px'}
             {...rest}
         >
             {startEnhancer}

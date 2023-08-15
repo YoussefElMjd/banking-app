@@ -208,3 +208,192 @@ SecondaryWithIcons.args = {
         console.log('test');
     },
 };
+
+export const ThreedDotVertical = Template.bind({});
+ThreedDotVertical.args = {
+    w: 'fit-content',
+    h: '24px',
+    bgColor: 'transparent',
+    borderRadius: '18px',
+    children: <Icon name='threeDotVertical'></Icon>,
+    boxShadow: 'none',
+    handleOnClick: () => {
+        console.log('test');
+    },
+};
+
+export const ThreedDotHorizontal = Template.bind({});
+ThreedDotHorizontal.args = {
+    w: 'fit-content',
+    h: '24px',
+    bgColor: 'transparent',
+    borderRadius: '18px',
+    children: <Icon name='threeDotHorizontal'></Icon>,
+    boxShadow: 'none',
+    handleOnClick: () => {
+        console.log('test');
+    },
+};
+
+export const NotificationOn = Template.bind({});
+NotificationOn.args = {
+    w: 'fit-content',
+    h: '24px',
+    bgColor: 'transparent',
+    children: <Icon name='notificationOn'></Icon>,
+    boxShadow: 'none',
+    handleOnClick: () => {
+        console.log('test');
+    },
+};
+export const NotificationOff = Template.bind({});
+NotificationOff.args = {
+    w: 'fit-content',
+    h: '24px',
+    bgColor: 'transparent',
+    children: <Icon name='notificationOff'></Icon>,
+    boxShadow: 'none',
+    handleOnClick: () => {
+        console.log('test');
+    },
+};
+
+export const Water = Template.bind({});
+Water.args = {
+    w: 'fit-content',
+    h: '32px',
+    bgColor: 'transparent',
+    children: <Icon name='water'></Icon>,
+    boxShadow: 'none',
+    handleOnClick: () => {
+        console.log('water');
+    },
+};
+export const Electricity = Template.bind({});
+Electricity.args = {
+    w: 'fit-content',
+    h: '32px',
+    bgColor: 'transparent',
+    children: <Icon name='electricity'></Icon>,
+    boxShadow: 'none',
+    handleOnClick: () => {
+        console.log('electricity');
+    },
+};
+export const Gas = Template.bind({});
+Gas.args = {
+    w: 'fit-content',
+    h: '32px',
+    bgColor: 'transparent',
+    children: <Icon name='gas'></Icon>,
+    boxShadow: 'none',
+    handleOnClick: () => {
+        console.log('gas');
+    },
+};
+export const Internet = Template.bind({});
+Internet.args = {
+    w: 'fit-content',
+    h: '32px',
+    bgColor: 'transparent',
+    children: <Icon name='internet'></Icon>,
+    boxShadow: 'none',
+    handleOnClick: () => {
+        console.log('internet');
+    },
+};
+export const Phone = Template.bind({});
+Phone.args = {
+    w: 'fit-content',
+    h: '32px',
+    bgColor: 'transparent',
+    children: <Icon name='phone'></Icon>,
+    boxShadow: 'none',
+    handleOnClick: () => {
+        console.log('phone');
+    },
+};
+
+export const QuickActionBanking = Template.bind({});
+QuickActionBanking.args = {
+    w: '36px',
+    h: '36px',
+    bgColor: 'black',
+    borderRadius: '0px',
+    children: <Icon name='banking'></Icon>,
+    boxShadow: 'none',
+    handleOnClick: () => {},
+};
+export const QuickActionMessageCenter = Template.bind({});
+QuickActionMessageCenter.args = {
+    w: '36px',
+    h: '36px',
+    bgColor: 'black',
+    borderRadius: '0px',
+    children: <Icon name='messageCenter'></Icon>,
+    boxShadow: 'none',
+    handleOnClick: () => {},
+};
+export const QuickActionFundTransfer = Template.bind({});
+QuickActionFundTransfer.args = {
+    w: '36px',
+    h: '36px',
+    bgColor: 'black',
+    borderRadius: '0px',
+    children: <Icon name='fundTransfer'></Icon>,
+    boxShadow: 'none',
+    handleOnClick: () => {},
+};
+export const Warning = Template.bind({});
+Warning.args = {
+    w: 'fit-content',
+    h: 'fit-content',
+    padding: '8px',
+    borderRadius: '100%',
+    bgColor: COLORS.Secondary.T75.value,
+    children: <Icon name='warning'></Icon>,
+    boxShadow: 'none',
+    spacing: '0px',
+    handleOnClick: () => {},
+};
+
+export const WarningSmall = Template.bind({});
+WarningSmall.args = {
+    w: '36px',
+    h: '36px',
+    bgColor: COLORS.Secondary.T75.value,
+    children: <Icon name='warningSmall'></Icon>,
+    boxShadow: 'none',
+    handleOnClick: () => {},
+};
+
+export const WarningSmallOtherColor = Template.bind({});
+WarningSmallOtherColor.args = {
+    w: '36px',
+    h: '36px',
+    bgColor: COLORS.Primary.value,
+    children: (
+        <Icon name='warningSmall' stroke={COLORS.Secondary.T75.value}></Icon>
+    ),
+    boxShadow: 'none',
+    handleOnClick: () => {},
+};
+
+export const ArrowPropertyUp = Template.bind({});
+ArrowPropertyUp.args = {
+    w: 'fit-content',
+    h: 'fit-content',
+    bgColor: 'transparent',
+    children: <Icon name='arrowPropertyUp' />,
+    boxShadow: 'none',
+    handleOnClick: () => {},
+};
+export const ArrowPropertyDown = Template.bind({});
+ArrowPropertyDown.args = {
+    w: 'fit-content',
+    h: 'fit-content',
+    bgColor: 'transparent',
+    children: <Icon name='arrowPropertyDown' />,
+    boxShadow: 'none',
+    handleOnClick: () => {},
+};
