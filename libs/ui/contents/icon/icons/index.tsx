@@ -1,4 +1,5 @@
 import { Add } from './add';
+import { ArrowDown } from './arrow-down';
 import { ArrowLeft } from './arrow-left';
 import { ArrowPropertyDown, ArrowPropertyUp } from './arrowProperty';
 import { CheckboxOn, CheckboxOff } from './checkInput';
@@ -28,6 +29,7 @@ import { Warning, WarningSmall } from './warning';
 const Icons = {
     add: Add,
     arrowLeft: ArrowLeft,
+    arrowDown: ArrowDown,
     threeDotVertical: ThreeDotVertical,
     threeDotHorizontal: ThreeDotHorizontal,
     notificationOn: NotificationOn,

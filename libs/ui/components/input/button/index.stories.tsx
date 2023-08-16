@@ -397,3 +397,28 @@ ArrowPropertyDown.args = {
     boxShadow: 'none',
     handleOnClick: () => {},
 };
+
+export const RegisterWithCard = Template.bind({});
+RegisterWithCard.args = {
+    w: 'fit-content',
+    h: 'fit-content',
+    bgColor: 'transparent',
+    children: (
+        <Text
+            color={COLORS.Primary.value}
+            fontSize={'12px'}
+            fontFamily={'Outfit'}
+            fontWeight={'700'}
+            fontStyle={'normal'}
+            lineHeight={'normal'}
+            textTransform={'uppercase'}
+            _hover={{
+                filter: 'opacity(60%)',
+            }}
+        >
+            Register with card
+        </Text>
+    ),
+    boxShadow: 'none',
+    handleOnClick: () => {},
+};
