@@ -1,9 +1,9 @@
 import { HStack, Text, VStack } from '@chakra-ui/react';
 import React from 'react';
-import { ISelectOption } from './props';
-import COLORS from './../../../../constant/colors';
+import { IOption } from './props';
+import COLORS from '../../../constant/colors';
 
-export default function SelectOption({
+export default function Option({
     h,
     w,
     onClick,
@@ -12,7 +12,7 @@ export default function SelectOption({
     isSelected = false,
     isLast,
     ...rest
-}: ISelectOption) {
+}: IOption) {
     return (
         <HStack
             h={h}

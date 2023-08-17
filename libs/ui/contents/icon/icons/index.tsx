@@ -2,6 +2,7 @@ import { Add } from './add';
 import { ArrowDown } from './arrow-down';
 import { ArrowLeft } from './arrow-left';
 import { ArrowPropertyDown, ArrowPropertyUp } from './arrowProperty';
+import { Avatar } from './avatar';
 import { CheckboxOn, CheckboxOff } from './checkInput';
 import { EmptyUser } from './emptyUser';
 import {
@@ -23,6 +24,7 @@ import {
     Partners,
 } from './quickActions';
 import { RadioInputOff, RadioInputOn } from './radioInput';
+import { Search } from './search';
 import { SwitchInputOff, SwitchInputOn } from './switchInput';
 import { ThreeDotHorizontal, ThreeDotVertical } from './threedot';
 import { Warning, WarningSmall } from './warning';
@@ -58,6 +60,8 @@ const Icons = {
     warning: Warning,
     warningSmall: WarningSmall,
     emptyUser: EmptyUser,
+    search: Search,
+    avatar: Avatar,
 };
 
 export default Icons;

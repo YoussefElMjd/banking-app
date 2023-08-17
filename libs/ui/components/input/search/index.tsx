@@ -1,20 +1,22 @@
-import { HStack, Text, VStack, Box } from '@chakra-ui/react';
+import { HStack, Text, VStack, Box, Input, filter } from '@chakra-ui/react';
 import React, { useState } from 'react';
-import { ISelect } from './props';
+import { ISearchInput } from './props';
 import COLORS from '../../../constant/colors';
 import { motion } from 'framer-motion';
 import Option from '../option';
 import { OptionType } from '../option/type';
 
-export default function Select({
+export default function SearchInput({
     h,
     w,
     endEnhancer,
     options,
     selectedValue,
+    filterValue,
     changeSelectedValue,
+    changeFilterValue,
     ...rest
-}: ISelect) {
+}: ISearchInput) {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     function toggleIsMenuOpent() {
         setIsMenuOpen(!isMenuOpen);
@@ -38,16 +40,23 @@ export default function Select({
                 {...rest}
             >
                 <Box w={'80px'}>
-                    <Text
-                        color={'white'}
+                    <Input
+                        variant={'unstyled'}
+                        w={'150px'}
+                        bgColor='transparent'
+                        textColor={'white'}
+                        border='none'
+                        outline='none'
                         fontSize={'12px'}
                         fontFamily={'Outfit'}
                         fontWeight={'500'}
                         fontStyle={'normal'}
                         lineHeight={'normal'}
-                    >
-                        {selectedValue}
-                    </Text>
+                        placeholder={'Search'}
+                        onChange={(value) => {
+                            changeFilterValue(value.currentTarget.value);
+                        }}
+                    />
                 </Box>
                 {endEnhancer}
             </HStack>
@@ -61,7 +70,7 @@ export default function Select({
                     <VStack
                         w={w}
                         spacing='0px'
-                        bg={COLORS.Secondary.T15.value}
+                        bg={COLORS.Secondary.Light.value}
                         borderBottomLeftRadius={'18px'}
                         borderBottomRightRadius={'18px'}
                     >

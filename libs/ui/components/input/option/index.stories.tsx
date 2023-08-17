@@ -3,7 +3,7 @@ import Select from '.';
 import { ComponentMeta } from '@storybook/react';
 import { ComponentStory } from '@storybook/react';
 import SelectOption from '.';
-import COLORS from '../../../../constant/colors';
+import COLORS from '../../../constant/colors';
 
 export default {
     title: 'Components/Inputs/Select/Option',
