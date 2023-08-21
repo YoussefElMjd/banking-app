@@ -3,6 +3,7 @@ import React from 'react';
 import IIconTextDetail from './props';
 import COLORS from '../../../constant/colors';
 import Text from '../text';
+import ProgressBar from '@ramonak/react-progress-bar';
 
 export default function IconTextDetail({
     icon,
