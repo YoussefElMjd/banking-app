@@ -28,6 +28,9 @@ import { Search } from './search';
 import { SwitchInputOff, SwitchInputOn } from './switchInput';
 import { ThreeDotHorizontal, ThreeDotVertical } from './threedot';
 import { Warning, WarningSmall } from './warning';
+import { Transaction } from './transaction';
+import { BillsPayHistory } from './bills-pay-history';
+import { RecentBills } from './recent-bills';
 const Icons = {
     add: Add,
     arrowLeft: ArrowLeft,
@@ -62,6 +65,9 @@ const Icons = {
     emptyUser: EmptyUser,
     search: Search,
     avatar: Avatar,
+    transaction: Transaction,
+    billsPayHistory: BillsPayHistory,
+    recentBills: RecentBills,
 };
 
 export default Icons;

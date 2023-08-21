@@ -4,7 +4,8 @@ import { ComponentMeta } from '@storybook/react';
 import { ComponentStory } from '@storybook/react';
 import Icon from '../../../contents/icon/index';
 import COLORS from '../../../constant/colors';
-import { Option } from './type';
+import { OptionType } from './../option/type';
+
 export default {
     title: 'Components/Inputs/Select',
     component: Select,
@@ -15,7 +16,7 @@ export default {
 
 const Template: ComponentStory<typeof Select> = () => {
     const [selectedValue, setSelectedValue] = useState<string>('This Month');
-    const options: Option[] = [
+    const options: OptionType[] = [
         { value: 'This Month', label: 'This Month' },
         { value: 'Last 30 Days', label: 'Last 30 Days' },
         { value: 'Last Year', label: 'Last Year' },
