@@ -13,6 +13,8 @@ export default function Select({
     options,
     selectedValue,
     changeSelectedValue,
+    spacing = '80px',
+    borderRadius = '15px',
     ...rest
 }: ISelect) {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -27,14 +29,14 @@ export default function Select({
                 maxH={h}
                 maxW={w}
                 borderStyle='none'
-                borderTopLeftRadius={'15px'}
-                borderTopRightRadius={'15px'}
-                borderBottomLeftRadius={isMenuOpen ? 0 : '15px'}
-                borderBottomRightRadius={isMenuOpen ? 0 : '15px'}
+                borderTopLeftRadius={borderRadius}
+                borderTopRightRadius={borderRadius}
+                borderBottomLeftRadius={isMenuOpen ? 0 : borderRadius}
+                borderBottomRightRadius={isMenuOpen ? 0 : borderRadius}
                 justifyContent={'center'}
                 alignItems={'center'}
                 onClick={toggleIsMenuOpent}
-                spacing={'80px'}
+                spacing={spacing}
                 {...rest}
             >
                 <Box w={'80px'}>
@@ -61,7 +63,7 @@ export default function Select({
                     <VStack
                         w={w}
                         spacing='0px'
-                        bg={COLORS.Secondary.T15.value}
+                        bg={rest.bgColor}
                         borderBottomLeftRadius={'18px'}
                         borderBottomRightRadius={'18px'}
                     >

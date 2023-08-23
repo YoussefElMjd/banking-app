@@ -9,6 +9,7 @@ export default function Button({
     handleOnClick,
     startEnhancer,
     endEnhancer,
+    spacing = '0px',
     ...rest
 }: IButton) {
     return (
@@ -24,7 +25,7 @@ export default function Button({
                 filter: 'saturate(80%)',
             }}
             onClick={handleOnClick}
-            spacing={'0px'}
+            spacing={spacing}
             {...rest}
         >
             {startEnhancer}

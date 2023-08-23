@@ -8,12 +8,14 @@ export default function Text({
     fontSize = '12px',
     fontWeight = '700',
     color = COLORS.Primary.value,
+    marginLeft,
 }: IIconText) {
     return (
         <ChakraText
             whiteSpace={'pre-line'}
             marginBlockStart={0}
             marginBlockEnd={0}
+            marginLeft={marginLeft}
             color={color}
             fontSize={fontSize}
             fontFamily={'Outfit'}

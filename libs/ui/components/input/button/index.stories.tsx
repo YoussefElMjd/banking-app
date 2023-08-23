@@ -4,7 +4,8 @@ import { ComponentMeta } from '@storybook/react';
 import { ComponentStory } from '@storybook/react';
 import Icon from './../../../contents/icon/index';
 import COLORS from '../../../constant/colors';
-import { HStack, Text } from '@chakra-ui/react';
+import { HStack } from '@chakra-ui/react';
+import Text from './../../content/text/index';
 export default {
     title: 'Components/Inputs/Button',
     component: Button,
@@ -418,6 +419,35 @@ RegisterWithCard.args = {
         >
             Register with card
         </Text>
+    ),
+    boxShadow: 'none',
+    handleOnClick: () => {},
+};
+export const IconAndText = Template.bind({});
+IconAndText.args = {
+    w: 'fit-content',
+    h: 'fit-content',
+    bgColor: 'transparent',
+    padding: '8px',
+    spacing: '10px',
+    children: (
+        <Icon
+            name='transaction'
+            stroke={COLORS.Secondary.Light.value}
+            width={'32px'}
+            height={'32px'}
+        />
+    ),
+    endEnhancer: (
+        <Text
+            color={COLORS.Secondary.Light.value}
+            fontSize={'16px'}
+            fontWeight={'500'}
+            _hover={{
+                filter: 'opacity(60%)',
+            }}
+            children={'Recent\n Transactions'}
+        />
     ),
     boxShadow: 'none',
     handleOnClick: () => {},

@@ -35,3 +35,28 @@ const Template: ComponentStory<typeof Select> = () => {
     );
 };
 export const SelectClassic = Template.bind({});
+
+const TemplateCard: ComponentStory<typeof Select> = () => {
+    const [selectedValue, setSelectedValue] = useState<string>('Eco');
+    const options: OptionType[] = [
+        { value: 'Eco', label: 'Eco' },
+        { value: 'Flex', label: 'Flex' },
+        { value: 'Premium', label: 'Premium' },
+    ];
+    return (
+        <Select
+            bgColor={COLORS.TextDark.T25.value}
+            endEnhancer={
+                <Icon name='arrowDown' stroke={COLORS.TextDark.T3.value} />
+            }
+            w='170px'
+            h='32px'
+            spacing='40px'
+            borderRadius={'24px'}
+            selectedValue={selectedValue}
+            options={options}
+            changeSelectedValue={setSelectedValue}
+        />
+    );
+};
+export const SelectCard = TemplateCard.bind({});
