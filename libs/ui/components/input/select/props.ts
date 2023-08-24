@@ -5,4 +5,6 @@ export interface ISelect extends Omit<StackProps, 'children'> {
     options?: OptionType[];
     selectedValue: string;
     changeSelectedValue: (value: string) => void;
+    label?: string;
+    labelColor?: string;
 }

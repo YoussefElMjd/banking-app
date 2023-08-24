@@ -1,10 +1,11 @@
-import { HStack, Text, VStack, Box } from '@chakra-ui/react';
+import { HStack, VStack, Box } from '@chakra-ui/react';
 import React, { useState } from 'react';
 import { ISelect } from './props';
 import COLORS from '../../../constant/colors';
 import { motion } from 'framer-motion';
 import Option from '../option';
 import { OptionType } from '../option/type';
+import Text from '../../content/text';
 
 export default function Select({
     h,
@@ -15,6 +16,8 @@ export default function Select({
     changeSelectedValue,
     spacing = '80px',
     borderRadius = '15px',
+    label,
+    labelColor,
     ...rest
 }: ISelect) {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -22,7 +25,21 @@ export default function Select({
         setIsMenuOpen(!isMenuOpen);
     }
     return (
-        <VStack w={w} spacing='0'>
+        <VStack
+            w={w}
+            spacing='6px'
+            position={'relative'}
+            justifyContent={'left'}
+            alignItems={'left'}
+        >
+            <Text
+                marginLeft={'16px'}
+                fontSize={'12px'}
+                fontWeight={'400'}
+                color={labelColor}
+            >
+                {label}
+            </Text>
             <HStack
                 h={h}
                 w={w}
@@ -55,12 +72,21 @@ export default function Select({
             </HStack>
             {isMenuOpen && (
                 <motion.div
+                    style={{
+                        position: 'absolute', // Position the menu options absolutely
+                        top: '100%',
+                        left: 0,
+                        zIndex: 1, // Ensure it's above other content
+                    }}
                     initial={{ opacity: 0, y: -30 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -20 }}
                     transition={{ duration: 0.5 }}
                 >
                     <VStack
+                        position={'absolute'}
+                        left={0}
+                        zIndex={1}
                         w={w}
                         spacing='0px'
                         bg={rest.bgColor}

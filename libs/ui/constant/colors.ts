@@ -22,7 +22,7 @@ const COLORS: Colors = {
     },
     TextDark: {
         T3: { value: '#C2BCE4' },
-        T25: { value: 'rgba(31, 23, 80,0.8)' },
+        T25: { value: 'rgba(31, 23, 80,0.35)' },
     },
     White: { value: '#FFFFFF' },
 };
