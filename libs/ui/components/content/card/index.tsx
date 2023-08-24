@@ -32,12 +32,11 @@ export default function Card({ w, h }: ICard) {
 
     return (
         <HStack
-            w='578px'
+            w='570px'
             h={'371px'}
-            padding={'36px 48px'}
             borderRadius={'28px'}
             bgColor={actualBgColor}
-            justifyContent={'left'}
+            justifyContent={'center'}
             alignItems={'center'}
             bgImage={'./assets/images/Blurs.png'}
             spacing={'30px'}
@@ -48,22 +47,25 @@ export default function Card({ w, h }: ICard) {
                 setBgCardColor={setActualBgColor}
             />
             <VStack spacing='30px' justifyContent={'left'} alignItems={'left'}>
-                <Select
-                    bgColor={COLORS.TextDark.T25.value}
-                    endEnhancer={
-                        <Icon
-                            name='arrowDown'
-                            stroke={COLORS.TextDark.T3.value}
-                        />
-                    }
-                    w='170px'
-                    h='32px'
-                    spacing='40px'
-                    borderRadius={'24px'}
-                    selectedValue={selectCardType}
-                    options={options}
-                    changeSelectedValue={setSelectCardType}
-                />
+                <HStack spacing='246px'>
+                    <Select
+                        bgColor={COLORS.TextDark.T25.value}
+                        endEnhancer={
+                            <Icon
+                                name='arrowDown'
+                                stroke={COLORS.TextDark.T3.value}
+                            />
+                        }
+                        w='170px'
+                        h='32px'
+                        spacing='40px'
+                        borderRadius={'24px'}
+                        selectedValue={selectCardType}
+                        options={options}
+                        changeSelectedValue={setSelectCardType}
+                    />
+                    <Icon name='nfc' />
+                </HStack>
                 <VStack
                     spacing='8px'
                     justifyContent={'left'}

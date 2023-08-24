@@ -31,6 +31,7 @@ import { Warning, WarningSmall } from './warning';
 import { Transaction } from './transaction';
 import { BillsPayHistory } from './bills-pay-history';
 import { RecentBills } from './recent-bills';
+import { Nfc } from './nfc';
 const Icons = {
     add: Add,
     arrowLeft: ArrowLeft,
@@ -68,6 +69,7 @@ const Icons = {
     transaction: Transaction,
     billsPayHistory: BillsPayHistory,
     recentBills: RecentBills,
+    nfc: Nfc,
 };
 
 export default Icons;
